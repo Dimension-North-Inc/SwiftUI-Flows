@@ -6,24 +6,20 @@ import PackageDescription
 let package = Package(
     name: "SwiftUIFlows",
     platforms: [
+        .iOS(.v17),
         .macOS(.v14),
-        .iOS(.v17)
     ],
     products: [
-        // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
             name: "SwiftUIFlows",
-            targets: ["SwiftUIFlows"] // Also update the target it points to
+            targets: ["SwiftUIFlows"]
         ),
     ],
     targets: [
-        // Targets are the basic building blocks of a package, defining a module or a test suite.
-        // Targets can depend on other targets in this package and products from dependencies.
         .target(
             name: "SwiftUIFlows"
         ),
         .testTarget(
-            // Also update the test target and its dependency
             name: "SwiftUIFlowsTests",
             dependencies: ["SwiftUIFlows"]
         ),
